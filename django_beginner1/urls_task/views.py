@@ -25,3 +25,6 @@ def square_num(request):
 	for i in range(1,16):
 		my_dict.setdefault(i, i**2)
 	return HttpResponse(f"{my_dict}")
+
+def video(request):
+	return render(request, 'urls_task/video.html')
