@@ -1,0 +1,17 @@
+{% extends 'to_do/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{form|crispy}}
+                <div class="form-group">
+                    <button class="btn btn-info" type="submit">Log In</button>
+                </div>
+    </form>
+        <div class="border-top pt-3">
+
+            <small class="text-muted">
+                Need an Account? <a class='ml-2' id="sign_up" href="{% url 'register' %}">Sign Up Now</a>
+            </small>
+        </div>
+{% endblock content %}

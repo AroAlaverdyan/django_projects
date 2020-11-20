@@ -12,17 +12,11 @@ def home(request):
 	return render(request, 'to_do/home.html', context)
 
 def to_do_view(request, pk):
-	task = NewToDo.objects.all().filter(id = pk)[0]
+	task = NewToDo.objects.get(id = pk)
+	context = {'task':task}
+	return render(request, 'to_do/task_view.html', context)
 
-	forms = TaskForm(instance = task)
-
-	content = {
-				'forms': forms,
-				'task': task
-				}
-
-	return render(request, 'to_do/task_view.html', content)
-
+	
 
 def to_do_update(request, pk):
 	task = NewToDo.objects.all().filter(id = pk)[0]

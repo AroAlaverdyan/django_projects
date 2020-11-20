@@ -1,0 +1,17 @@
+{% extends 'to_do/base.html' %}
+{% load crispy_forms_tags %}
+	{% block content %}
+
+		<h3>Register</h3>
+		<hr>
+		<form method="POST" >
+			{% csrf_token %}
+			{{form|crispy}}
+			<input class="btn btn-info" type="submit" name="Create Task" value="Sign Up">
+	</form>
+	<hr>
+	<small class="text-muted">
+                Already Have an Account? <a class='ml-2' id="sign_up" href="{% url 'login' %}">Log In Here</a>
+            </small>
+
+	{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "to_do/base.html" %}
+{% block content %}
+	<h3>Are you sure you want to log out?</h3>
+	<hr>
+    <a class="btn btn-nm btn-danger" href="{% url 'logoutbasic' %}">Yes</a>
+    <a class="btn btn-nm btn-primary" href="{% url 'home' %}">Cancel</a>
+{% endblock content %}
