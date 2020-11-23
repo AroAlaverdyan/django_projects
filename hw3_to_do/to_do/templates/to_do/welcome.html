@@ -1,0 +1,23 @@
+{% extends 'to_do/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+	
+	<div class="todo-list">
+	<h2>Hello Dear User 🙂</h2>
+
+	<div class="item-row">				
+		<h5>You are now in ToDo website where you can create your daily #ToDo_List, update them, turn on noticication and what deadline do you have for that task.</h5>
+	</div>
+
+	<div class="item-row">
+		<h5>But before that please Log In below</h5>
+		<a class="btn btn-sm btn-warning" href="{% url 'login' %}">Log In</a>
+	</div>
+	<div class="item-row">
+		<h5>Need an Account?</h5>
+		<a class="btn btn-sm btn-info" href="{% url 'register' %}">Sign Up</a>
+	</div>	
+
+	</div>
+{% endblock content %}

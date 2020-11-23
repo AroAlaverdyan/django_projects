@@ -8,4 +8,5 @@ class TaskForm(ModelForm):
 	class Meta:
 		model = NewToDo
 		fields = '__all__'
+		exclude = ['user']
 

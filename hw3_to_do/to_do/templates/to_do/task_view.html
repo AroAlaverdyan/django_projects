@@ -13,6 +13,7 @@
 		<h6><b>STATUS</b> - {{task.get_status_display}}</h6>
 		<br>	
 
+	<a class="btn btn-sm btn-success" href="{% url 'home' %}">Back</a>
 	<a class="btn btn-sm btn-info" href="{% url 'to_do_update' task.id %}">Update</a>
 		<a class="btn btn-sm btn-danger" href="{% url 'task_delete' task.id %}">Delete</a>
 
